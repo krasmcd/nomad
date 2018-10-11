@@ -1,0 +1,48 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto 100px;
+  position: relative;
+
+  &.hero {
+    padding: 5% 0;
+
+    img.logo {
+      position: absolute;
+      top: 30px;
+      left: 0px;
+      width: 60px;
+    }
+
+    .copy_container {
+      margin: 200px 0 0;
+
+      button {
+        margin: 20px 0 0 0;
+      }
+    }
+  }
+
+  &.bullets {
+    h3 {
+      flex: 1 0 100%;
+    }
+
+    .bullet {
+      flex: 1 0 50%;
+      padding-top: 40px;
+
+      &:nth-child(even) {
+        padding-right: 40px;
+      }
+      &:nth-child(odd) {
+        padding-left: 40px;
+      }
+
+      h4 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
