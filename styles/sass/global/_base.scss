@@ -16,9 +16,13 @@ ul {
   -webkit-padding-start: 0;
 }
 
+a,
+button {
+  font-family: 'Avenir Next', 'Muli', Helvetica, Arial, sans-serif;
+}
+
 a {
   color: $green;
-  font-family: 'Avenir Next', 'Muli', Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   font-weight: 700;
   outline: 0;

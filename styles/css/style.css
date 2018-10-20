@@ -12,9 +12,12 @@ ul {
   list-style-type: none;
   -webkit-padding-start: 0; }
 
+a,
+button {
+  font-family: 'Avenir Next', 'Muli', Helvetica, Arial, sans-serif; }
+
 a {
   color: #2CD182;
-  font-family: 'Avenir Next', 'Muli', Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   font-weight: 700;
   outline: 0;
