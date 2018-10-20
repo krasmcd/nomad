@@ -1,0 +1,30 @@
+button {
+  $btn-padding: 16px;
+  background: $green;
+  border: none;
+  border-radius: $btn-padding*2;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: $btn-padding $btn-padding*2;
+  transition: .3s;
+
+  @media (max-width: $screen_sm) {
+    width: 100%;
+  }
+
+  &:hover {
+    background: darken($green, 5%);
+    cursor: pointer;
+  }
+
+  &.dark {
+    background: $blue_dark;
+
+    &:hover {
+      background: lighten($blue_dark, 5%);
+      cursor: pointer;
+    }
+  }
+}

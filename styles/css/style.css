@@ -1,25 +1,7 @@
-h1, h2, h3, h4, p, ul, li {
-  color: #243347;
-  font-family: 'Avenir Next', 'Muli', Helvetica, Arial, sans-serif; }
-
-h1 {
-  font-size: 4em;
-  font-weight: 700; }
-
-h2 {
-  font-size: 1.75em;
-  font-weight: 400; }
-
-h3 {
-  font-size: 2.25em; }
-
-h4, p {
-  font-size: 1.1em; }
-
 * {
   box-sizing: border-box; }
 
-body, h1, h2, h3, h4, p, ul, li {
+body, h1, h2, h3, h4, section.bullets li, p, ul, li {
   margin: 0;
   padding: 0; }
 
@@ -31,13 +13,76 @@ ul {
   -webkit-padding-start: 0; }
 
 a {
+  color: #2CD182;
+  font-family: 'Avenir Next', 'Muli', Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
   outline: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: .3s; }
   a:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: #23a768; }
 
 img {
   max-width: 100%; }
+
+section,
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 1100px; }
+
+footer {
+  flex-direction: column;
+  padding: 0 0 5rem;
+  text-align: center; }
+  footer img {
+    margin: 2rem auto;
+    width: 10rem; }
+  footer a {
+    margin: 1rem 0 0; }
+
+h1, h2, h3, h4, section.bullets li, p, ul, li {
+  font-family: 'Avenir Next', 'Muli', Helvetica, Arial, sans-serif;
+  color: #243347; }
+
+h1 {
+  font-size: 4em;
+  font-weight: 700; }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.45em;
+      line-height: 1.1;
+      margin-bottom: 20px; } }
+
+h2 {
+  font-size: 1.75em;
+  font-weight: 400; }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.25em; } }
+
+h3 {
+  font-size: 2.25em; }
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1.4em; } }
+
+h4, section.bullets li {
+  font-weight: 700; }
+
+h4, section.bullets li, p {
+  font-size: 1.1em; }
+  @media (max-width: 768px) {
+    h4, section.bullets li, p {
+      font-size: 1em; } }
+
+i {
+  color: #2CD182;
+  font-size: 1.2em;
+  margin-bottom: .8em; }
 
 button {
   background: #2CD182;
@@ -49,37 +94,122 @@ button {
   letter-spacing: 1px;
   padding: 16px 32px;
   transition: .3s; }
+  @media (max-width: 768px) {
+    button {
+      width: 100%; } }
   button:hover {
     background: #28bc75;
     cursor: pointer; }
+  button.dark {
+    background: #243347; }
+    button.dark:hover {
+      background: #2d3f58;
+      cursor: pointer; }
 
 section {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto 100px;
-  position: relative; }
+  margin-bottom: 15%; }
+  @media (max-width: 1100px) {
+    section {
+      padding: 0 5%; } }
+  section.hero, section.feature {
+    max-width: none;
+    padding: 5%; }
   section.hero {
-    padding: 5% 0; }
+    background: #70c88c url("../../img/hero_bottle.jpg") no-repeat right center;
+    background-size: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 86vh; }
+    @media (max-width: 1100px) {
+      section.hero {
+        background-size: 70%;
+        background-position: 150% center; } }
+    @media (max-width: 768px) {
+      section.hero {
+        background-size: 140%;
+        background-position: -70% center;
+        align-items: center; } }
     section.hero img.logo {
       position: absolute;
-      top: 30px;
+      top: -190px;
       left: 0px;
       width: 60px; }
+      @media (max-width: 768px) {
+        section.hero img.logo {
+          top: -100px;
+          width: 40px; } }
     section.hero .copy_container {
-      margin: 200px 0 0; }
+      flex: 0 1 100%;
+      max-width: 1100px;
+      margin: 200px auto 100px;
+      position: relative; }
+      @media (max-width: 768px) {
+        section.hero .copy_container {
+          margin: auto; } }
+      section.hero .copy_container h1, section.hero .copy_container h2 {
+        color: #FFF;
+        max-width: 70%;
+        text-shadow: 0px 0px 15px #3d9f5c; }
       section.hero .copy_container button {
-        margin: 20px 0 0 0; }
-  section.bullets h3 {
+        margin: 80px 0 0 0; }
+        @media (max-width: 1100px) {
+          section.hero .copy_container button {
+            display: none; } }
+  section.product_detail .img_container,
+  section.product_detail .copy_container {
+    flex: 0 1 50%; }
+    @media (max-width: 768px) {
+      section.product_detail .img_container,
+      section.product_detail .copy_container {
+        flex: 0 1 100%; } }
+  section.product_detail .copy_container {
+    padding-top: 2rem; }
+    section.product_detail .copy_container h2 {
+      margin-bottom: 1rem; }
+    section.product_detail .copy_container .list_container {
+      display: flex;
+      margin: 1rem 0 3rem; }
+    section.product_detail .copy_container ul {
+      flex: 0 1 50%; }
+  section.bullets h3, section.bullets h2, section.bullets ul {
     flex: 1 0 100%; }
+  section.bullets ul {
+    padding: 0 0 2rem;
+    list-style: circle inside url("../../img/check.png"); }
+    @media (max-width: 768px) {
+      section.bullets ul {
+        padding: 0; } }
+  section.bullets li {
+    font-size: 130%; }
+    @media (max-width: 768px) {
+      section.bullets li {
+        font-size: 115%; } }
   section.bullets .bullet {
     flex: 1 0 50%;
+    padding-right: 60px;
     padding-top: 40px; }
-    section.bullets .bullet:nth-child(even) {
-      padding-right: 40px; }
-    section.bullets .bullet:nth-child(odd) {
-      padding-left: 40px; }
-    section.bullets .bullet h4 {
-      margin-bottom: 10px; }
+    @media (max-width: 768px) {
+      section.bullets .bullet {
+        flex: 1 0 100%;
+        padding-right: 0px; }
+        section.bullets .bullet:nth-of-type(2) {
+          padding-top: 0; } }
+    section.bullets .bullet h4, section.bullets .bullet li {
+      margin-bottom: .3rem; }
+  section.feature {
+    background: url("../../img/bg_pattern-dark@2x.png"); }
+    section.feature .copy_container {
+      margin: 5% auto;
+      max-width: 1100px; }
+      @media (max-width: 1100px) {
+        section.feature .copy_container {
+          margin: 15% auto; } }
+      section.feature .copy_container h3 {
+        color: #FFF; }
+      section.feature .copy_container h4, section.feature .copy_container section.bullets li, section.bullets section.feature .copy_container li {
+        color: #2CD182;
+        font-style: italic;
+        font-weight: 300;
+        margin-top: 3%; }
 
 /*# sourceMappingURL=style.css.map */

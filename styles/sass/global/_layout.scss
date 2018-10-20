@@ -1,47 +1,163 @@
 section {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto 100px;
-  position: relative;
+  margin-bottom: 15%;
+
+  @media (max-width: $screen_md) {
+    padding: 0 5%;
+  }
+
+  &.hero,
+  &.feature {
+    max-width: none;
+    padding: 5%;
+  }
 
   &.hero {
-    padding: 5% 0;
+    background: $green-bg url("../../img/hero_bottle.jpg") no-repeat right center;
+    background-size: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 86vh;
+
+    @media (max-width: $screen_md) {
+      background-size: 70%;
+      background-position: 150% center;
+    }
+
+    @media (max-width: $screen_sm) {
+      background-size: 140%;
+      background-position: -70% center;
+      align-items: center;
+    }
 
     img.logo {
       position: absolute;
-      top: 30px;
+      top: -190px;
       left: 0px;
       width: 60px;
+
+      @media (max-width: $screen_sm) {
+        top: -100px;
+        width: 40px;
+      }
     }
 
     .copy_container {
-      margin: 200px 0 0;
+      flex: 0 1 100%;
+      max-width: $content-max-width-lg;
+      margin: 200px auto 100px;
+      position: relative;
+
+      @media (max-width: $screen_sm) {
+        margin: auto;
+      }
+
+      h1, h2 {
+        color: #FFF;
+        max-width: 70%;
+        text-shadow: 0px 0px 15px darken($green_bg, 18%);
+      }
 
       button {
-        margin: 20px 0 0 0;
+        margin: 80px 0 0 0;
+
+        @media (max-width: $screen_md) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.product_detail {
+    .img_container,
+    .copy_container {
+      flex: 0 1 50%;
+
+      @media (max-width: $screen_sm) {
+        flex: 0 1 100%;
+      }
+    }
+
+    .copy_container {
+      padding-top: 2rem;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      .list_container {
+        display: flex;
+        margin: 1rem 0 3rem;
+      }
+
+      ul {
+        flex: 0 1 50%;
       }
     }
   }
 
   &.bullets {
-    h3 {
+    h3, h2, ul {
       flex: 1 0 100%;
+    }
+
+    ul {
+      padding: 0 0 2rem;
+      list-style: circle inside url("../../img/check.png");
+
+      @media (max-width: $screen-sm) {
+        padding: 0;
+      }
+    }
+
+    li {
+      @extend h4;
+      font-size: 130%;
+
+      @media (max-width: $screen_sm) {
+        font-size: 115%;
+      }
     }
 
     .bullet {
       flex: 1 0 50%;
+      padding-right: 60px;
       padding-top: 40px;
 
-      &:nth-child(even) {
-        padding-right: 40px;
-      }
-      &:nth-child(odd) {
-        padding-left: 40px;
+      @media (max-width: $screen_sm) {
+        flex: 1 0 100%;
+        padding-right: 0px;
+
+        &:nth-of-type(2) {
+          padding-top: 0;
+        }
       }
 
       h4 {
-        margin-bottom: 10px;
+        margin-bottom: .3rem;
+      }
+    }
+  }
+
+  &.feature {
+    background: url('../../img/bg_pattern-dark@2x.png');
+
+    .copy_container {
+      margin: 5% auto;
+      max-width: $content-max-width-lg;
+
+      @media (max-width: $screen_md) {
+        margin: 15% auto;
+      }
+
+      h3 {
+        color: #FFF;
+      }
+
+      h4 {
+        color: $green;
+        font-style: italic;
+        font-weight: 300;
+        margin-top: 3%;
       }
     }
   }

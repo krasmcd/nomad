@@ -1,22 +1,50 @@
 h1, h2, h3, h4, p, ul, li {
-  color: $blue_dark;
   font-family: 'Avenir Next', 'Muli', Helvetica, Arial, sans-serif;
+  color: $blue_dark;
 }
 
 h1 {
   font-size: 4em;
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 2.45em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
 }
 
 h2 {
   font-size: 1.75em;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 1.25em;
+  }
 }
 
 h3 {
   font-size: 2.25em;
+
+  @media (max-width: 768px) {
+    font-size: 1.4em;
+  }
+}
+
+h4 {
+  font-weight: 700;
 }
 
 h4, p {
   font-size: 1.1em;
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
+}
+
+i {
+  color: $green;
+  font-size: 1.2em;
+  margin-bottom: .8em;
 }
