@@ -191,9 +191,7 @@ section {
     @media (max-width: 768px) {
       section.bullets .bullet {
         flex: 1 0 100%;
-        padding-right: 0px; }
-        section.bullets .bullet:nth-of-type(2) {
-          padding-top: 0; } }
+        padding-right: 0px; } }
     section.bullets .bullet h4, section.bullets .bullet li {
       margin-bottom: .3rem; }
   section.feature {
