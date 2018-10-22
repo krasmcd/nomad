@@ -1,0 +1,13 @@
+//remove the header padding
+.main-content {
+  padding-top: 0 !important;
+}
+
+//remove Shopify's janky-ass text transforms
+h1, h2, h3, h4, h5, h6, p {
+  text-transform: none !important;
+}
+
+.shopify-section .index-section .index-section--featured-product {
+  margin-left: -10000px !important;
+}
