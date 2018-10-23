@@ -12,8 +12,9 @@ section {
   }
 
   &.hero {
-    background: $green-bg url("../../img/hero_bottle.jpg") no-repeat right center;
+    background: $green-bg url("https://i.postimg.cc/RZ9H83mD/hero-bottle.jpg") no-repeat right center;
     background-size: 50%;
+    display: flex;
     padding-top: 5%;
     padding-bottom: 5%;
     height: 86vh;
@@ -55,6 +56,10 @@ section {
         color: #FFF;
         max-width: 70%;
         text-shadow: 0px 0px 15px darken($green_bg, 10%);
+      }
+
+      h1 {
+        margin-bottom: .5rem;
       }
 
       button {
@@ -104,7 +109,7 @@ section {
 
     ul {
       padding: 0 0 2rem;
-      list-style: circle inside url("../../img/check.png");
+      list-style: circle inside url("https://i.postimg.cc/7PG0T8Xm/check.png");
 
       @media (max-width: $screen-sm) {
         padding: 0;
@@ -137,7 +142,7 @@ section {
   }
 
   &.feature {
-    background: url('../../img/bg_pattern-dark@2x.png');
+    background: url("https://i.postimg.cc/fkQwV05n/bg-pattern-dark-2x.png");
 
     .copy_container {
       margin: 5% auto;
