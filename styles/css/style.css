@@ -215,4 +215,13 @@ section {
         font-weight: 300;
         margin-top: 3%; }
 
+.main-content {
+  padding-top: 0 !important; }
+
+h1, h2, h3, h4, section.bullets li, h5, h6, p {
+  text-transform: none !important; }
+
+.shopify-section .index-section .index-section--featured-product {
+  margin-left: -10000px !important; }
+
 /*# sourceMappingURL=style.css.map */
