@@ -54,14 +54,16 @@ section {
       h1, h2 {
         color: #FFF;
         max-width: 70%;
-        text-shadow: 0px 0px 15px darken($green_bg, 18%);
+        text-shadow: 0px 0px 15px darken($green_bg, 10%);
       }
 
       button {
         margin: 80px 0 0 0;
 
         @media (max-width: $screen_md) {
-          display: none;
+          background: #FFF;
+          color: $green;
+          box-shadow: 0px 0px 15px darken($green_bg, 18%)
         }
       }
     }

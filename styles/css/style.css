@@ -154,12 +154,14 @@ section {
       section.hero .copy_container h1, section.hero .copy_container h2 {
         color: #FFF;
         max-width: 70%;
-        text-shadow: 0px 0px 15px #3d9f5c; }
+        text-shadow: 0px 0px 15px #4bba6e; }
       section.hero .copy_container button {
         margin: 80px 0 0 0; }
         @media (max-width: 1100px) {
           section.hero .copy_container button {
-            display: none; } }
+            background: #FFF;
+            color: #2CD182;
+            box-shadow: 0px 0px 15px #3d9f5c; } }
   section.product_detail .img_container,
   section.product_detail .copy_container {
     flex: 0 1 50%; }
@@ -219,7 +221,8 @@ section {
   padding-top: 0 !important; }
 
 h1, h2, h3, h4, section.bullets li, h5, h6, p {
-  text-transform: none !important; }
+  text-transform: none !important;
+  letter-spacing: normal; }
 
 .shopify-section .index-section .index-section--featured-product {
   margin-left: -10000px !important; }
